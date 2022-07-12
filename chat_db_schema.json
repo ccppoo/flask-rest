@@ -1,0 +1,22 @@
+{
+    "chat" : {
+        "chat_id": "INT UNSIGNED AUTO_INCREMENT KEY",
+        "room_uuid" : "CHAR(36)",
+        "created_at" : "DATETIME",
+        "member_nickname" : "VARCHAR(255)",
+        "member_uuid" : "CHAR(36)",
+        "chat_content":  "VARCHAR(255)",
+        "media_type" : "TINYINT UNSIGNED",
+        "message_state" : "TINYINT UNSIGNED"
+    },
+    "chat_insert" : [
+        "INT",
+        "CHAR",
+        "DATETIME",
+        "VARCHAR",
+        "CHAR",
+        "VARCHAR",
+        "TINYINT",
+        "TINYINT"
+    ]
+}
