@@ -1,7 +1,6 @@
 {
     "chat" : {
         "chat_id": "INT UNSIGNED AUTO_INCREMENT KEY",
-        "room_uuid" : "CHAR(36)",
         "created_at" : "DATETIME",
         "member_nickname" : "VARCHAR(255)",
         "member_uuid" : "CHAR(36)",

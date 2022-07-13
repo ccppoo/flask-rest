@@ -15,3 +15,12 @@ FROM chat_db.{room_id}
 ORDER BY chat_id DESC
 LIMIT {count};
 """
+
+get_chat_tables = """
+SELECT 
+	TABLE_NAME
+FROM INFORMATION_SCHEMA.tables
+WHEre TABLE_SCHEMA = 'chat_db'
+ORDER BY  UPDATE_TIME
+"""
+# TABLE_NAME, TABLE_ROWS, CREATE_TIME, UPDATE_TIME

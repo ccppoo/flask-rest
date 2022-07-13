@@ -3,6 +3,7 @@ import uuid
 import random
 import datetime
 from datetime import timedelta, tzinfo
+from chat_type import Chat_Data
 
 # uuid1 -> time based
 # uuid4 -> random
@@ -56,13 +57,7 @@ def gen_chat(members : int, count : int, room_uuid : str = None):
         f_member_uuid = str(uuid.uuid5(uuid.NAMESPACE_OID, f_name))
         f_time_formated =f_time.strftime('%Y-%m-%d %H:%M:%S')
 
-        items.append({
-            'room_uuid': ROOM_UUID,
-            "created_at": f_time_formated,
-            "member_nickname": f_name,
-            "member_uuid": f_member_uuid,
-            "chat_content":  f_chat,
-            "media_type": 1,
-            "message_state": 1
-        })
-    return items
+        items.append(Chat_Data (
+            None, f_time_formated, f_name, f_member_uuid, f_chat,1 ,1 
+        ))
+    return items, ROOM_UUID
